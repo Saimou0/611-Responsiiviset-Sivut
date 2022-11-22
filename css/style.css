@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Work+Sans:wght@300&display=swap');
+
+:root {
+    --valkonen: #fff;
+    --musta: #000;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+    color: var(--valkonen);
+}
+
+/* Jaettuja asetuksia */
+.common {
+    height: 100%;
+    background-color: #797979;
+}
+
+.common h1 {
+    font-size: 30px;
+    color: var(--musta);
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.common h2 {
+    font-size: 30px;
+    color: var(--musta);
+    margin: 10px 0px;
+}
+
+/* navigointi */
+.navbar {
+    background-color: var(--musta);
+    color: var(--valkonen);
+    height: 70px;
+}
+
+.navbar h1 {
+    font-size: 25px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--valkonen);
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-block: 2px var(--valkonen) solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* Työtehtäviä */
+.Bold {
+    color: var(--musta);
+    font-weight: bold;
+}
+
+.Loppu-teksti {
+    margin-bottom: 10px ;
+    color: var(--musta);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Arviointikriteerit */
+.Table hr {
+    margin: 10px auto;
+}
+
+.Kriteerit, th, td {
+    border: 1px solid var(--valkonen);
+    border-collapse: collapse;
+    color: var(--valkonen);
+    padding: 5px 10px;
+}
+
+.Kriteerit .väli {
+    height: 10px;
+}
+
+.Kriteerit th {
+    padding: 5px 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(83, 83, 83);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(44, 43, 43);
+}
+
+.Table .container {
+    padding: 10px 160px 0px 160px;
+}
+
+/* osaaminen ja rakenne */
+.Alkuteksti {
+    font-size: 1.1em;
+}
+
+/* osaaminen */
+.arvosanat {
+    color: var(--musta);
+    font-size: 1.2em;
+}
+
+/* Tutkinnon rakenne */
+.rakennelista {
+    list-style: inside;
+    color: var(--musta);
+    font-size: 1.12em;  
+    margin: 10px auto;
+}
+
+/* Tutkinnonosat */
+.tutkinnonosat h2 {
+    margin-bottom: 10px;
+    color: var(--valkonen);
+}
+
+.ammattitaito {
+    color: var(--musta);
+}
+
+.tieto li {
+    list-style: inside;
+    padding: 0px;
+    color: var(--valkonen);
+}
+
+.tietoteksti {
+    list-style: circle;
+    padding: 0px 55px;
+    color: var(--musta);
+}
+
+.tietotekstiloppu {
+    list-style: circle;
+    padding: 0px 55px;
+    color: var(--musta);
+    margin-bottom: 15px;
+}
+
+.tutkinnonosat hr {
+    margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--musta);
+    height: 70px;
+}
+
+/* Utils- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 10px 40px;
+    
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* 900px */
+@media (max-width: 900px) {
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .Table .container {
+        padding: 10px 100px;
+    }
+
+}
+
+@media (max-width: 820px) {
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+}
+
+/* Tabletit ja pienemmät */
+@media(max-width: 768px) {
+
+    /* common */
+    .common h1 {
+        font-size: 25px;
+    }
+
+    .common h2 {
+        font-size: 25px;
+    }
+
+    .common p {
+        font-size: 16px
+    }
+
+    /* navigointi */
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 5px auto;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    /* Kriteerit */
+    .Table .container {
+        padding: 10px 50px;
+    }
+
+}
+
+/* mobiili */
+@media(max-width: 500px) {
+
+    /* common */
+    .common h1 {
+        font-size: 20px;
+    }
+
+    .common h2 {
+        font-size: 20px;
+    }
+
+    /* navigointi */
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    /* tutkinnonosat */
+    .tieto li{
+        list-style: none;
+    }
+    .tietoteksti{
+        padding: 0px 10px;
+    }
+
+    .tietotekstiloppu {
+        padding: 0px 10px;
+    }
+
+}
